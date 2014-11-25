@@ -5,7 +5,7 @@
       <h1><%= yield :title %></h1>
 
         <% if @editorials.blank? %>
-          <div class="alert alert-warning">No hay libros que mostrar</div>
+          <div class="alert alert-warning">No hay editoriales que mostrar</div>
         <% else %>
           <div class="responsive-fake-table expansible-fake-table">
             <header class="row">
@@ -25,7 +25,7 @@
           </div>
         <% end %>
 
-      <%= link_to 'Agregar libro', new_editorial_path, class: 'btn btn-primary' %>
+      <%= link_to 'Agregar editorial', new_editorial_path, class: 'btn btn-primary' %>
     </div>
   </div>
 </div>
