@@ -6,6 +6,7 @@ es:
       book: Libro
       user: Usuario
       editorial: Editorial
+      author: Author
     attributes:
       user:
         email: Correo electrónico
@@ -23,6 +24,8 @@ es:
         isbn: ISBN
         cover: Portada
       editorial:
+        name: Nombre
+      author:
         name: Nombre
 
   date:

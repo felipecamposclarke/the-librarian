@@ -8,22 +8,20 @@
     <div class="responsive-fake-table expansible-fake-table">
       <header class="row">
         <div class="col hidden-xs hidden-sm col-md-1 empty-header"></div>
-        <div class="col col-xs-5 col-sm-4 col-md-3"><%=t('activerecord.attributes.book.title')%></div>
-        <div class="col col-xs-5 col-sm-3 col-md-3"><%=t('activerecord.attributes.book.author')%></div>
-        <div class="col hidden-xs col-sm-4 col-md-2"><%=t('activerecord.attributes.book.editorial')%></div>
+        <div class="col col-xs-9 col-sm-5 col-md-5"><%=t('activerecord.attributes.book.title')%></div>
+        <div class="col hidden-xs col-sm-5 col-md-3"><%=t('activerecord.attributes.book.editorial')%></div>
         <div class="col hidden-xs hidden-sm col-md-2"><%=t('activerecord.attributes.book.edition')%></div>
-        <div class="col col-xs-2 col-sm-1 col-md-1"><span class="hidden-sm hidden-xs">Opciones</span>&nbsp;</div>
+        <div class="col col-xs-3 col-sm-2 col-md-1"><span class="hidden-sm hidden-xs">Opciones</span>&nbsp;</div>
       </header>
       <% @books.each do |book|%>
         <section class="row">
           <div class="col hidden-xs hidden-sm col-md-1 toggle img-container">
             <%=image_tag book.cover.url(:thumb), :class => "img-circle"%>
           </div>
-          <div class="col col-xs-5 col-sm-4 col-md-3 toggle"><%=book.title %></div>
-          <div class="col col-xs-5 col-sm-3 col-md-3 toggle"><%=book.author%></div>
-          <div class="col hidden-xs col-sm-4 col-md-2 toggle"><%=book.editorial_name%></div>
+          <div class="col col-xs-9 col-sm-5 col-md-5 toggle"><%=book.title %></div>
+          <div class="col hidden-xs col-sm-5 col-md-3 toggle"><%=book.editorial_name%></div>
           <div class="col hidden-xs hidden-sm col-md-2 toggle"><%=book.edition%></div>
-          <div class="col col-xs-2 col-sm-1 col-md-1">
+          <div class="col col-xs-3 col-sm-2 col-md-1">
             <%= link_to content_tag('i','', class: 'fa fa-eye'), book, class: 'tooltipable', title: 'Ver' %>
             <%= link_to content_tag('i','', class: 'fa fa-pencil-square-o'), edit_book_path(book), class: 'tooltipable', title: 'Editar' %>
             <%= link_to content_tag('i','', class: 'fa fa-times'), book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'tooltipable', title: 'Eliminar' %>
