@@ -46,10 +46,32 @@ h1 {
   section:nth-child(odd) .col {
     background-color: #fff;
   }
-  
+
 }
 .expansible-fake-table {
   section .col.toggle {
     cursor: pointer;
+  }
+}
+
+
+// ====================================================
+// SHARED
+// ====================================================
+
+// FORMS
+// ----------------------------------------------------
+form {
+  input, select {
+    &.in-line-2 {
+      float: left;
+      width: 45%;
+      margin: 0 2.5% 15px;
+    }
+    &.in-line-3 {
+      float: left;
+      width: 30%;
+      margin: 0 1.6% 15px;
+    }
   }
 }
