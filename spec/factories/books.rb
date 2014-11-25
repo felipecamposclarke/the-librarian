@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :book do
       association :editorial
       title 'Faker Name'
-      author Faker::Name.name
       original_title 'Faker Original Title'
       translation Faker::Name.name
       edition 1

@@ -9,7 +9,7 @@ describe Book, :type => :model do
 
   describe "associations" do
     it { should belong_to(:editorial) }
+    it { should have_many(:authors).through(:works) }
   end
 end
-
 
