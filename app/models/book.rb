@@ -29,4 +29,7 @@ class Book < ActiveRecord::Base
   validates :edition, :publication_year, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
 
+  # Delegates
+  delegate :name, to: :editorial, prefix: true
+
 end
