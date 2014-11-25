@@ -21,5 +21,19 @@ module TheLibrarian
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :es
     config.i18n.locale = :es
+
+    # The default scaffold generators
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+      g.model_specs true
+      g.controller_specs false
+      g.stylesheets = false
+      g.javascripts = false
+      g.helper = false
+      g.test_framework  :rspec, :fixture => true, :views => false
+      g.integration_tool :rspec, :fixture => true, :views => true
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
   end
 end
