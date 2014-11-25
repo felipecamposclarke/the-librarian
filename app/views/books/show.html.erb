@@ -6,7 +6,7 @@
       <%= image_tag @book.cover.url(:medium), class: "img-responsive" %>
     </div>
     <div class="col-sm-12 col-md-9">
-      <dl class="dl-horizontal">
+      <dl class="dl-horizontal-left">
         <dt><%=t('activerecord.attributes.book.title') %></dt>
         <dd><%=@book.title || '-' %></dd>
         <dt><%=t('activerecord.attributes.book.author') %></dt>

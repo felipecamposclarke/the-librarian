@@ -16,8 +16,8 @@
       </header>
       <% @books.each do |book|%>
         <section class="row">
-          <div class="col hidden-xs hidden-sm col-md-1 toggle">
-            <%=image_tag book.cover.url(:thumb)%>
+          <div class="col hidden-xs hidden-sm col-md-1 toggle img-container">
+            <%=image_tag book.cover.url(:thumb), :class => "img-circle"%>
           </div>
           <div class="col col-xs-5 col-sm-4 col-md-3 toggle"><%=book.title %></div>
           <div class="col col-xs-5 col-sm-3 col-md-3 toggle"><%=book.author%></div>
