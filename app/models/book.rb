@@ -18,9 +18,13 @@
 #
 
 class Book < ActiveRecord::Base
-  
+
+  # Paperclip
+  has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ":style-cover-missing.png"
+
+  # Validations
   validates :title, :author, :editorial, :presence => true
   validates :edition, :publication_year, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
-  
-  
+  validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
+
 end
