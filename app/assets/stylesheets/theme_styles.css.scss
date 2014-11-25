@@ -28,41 +28,49 @@ h1 {
   .col:first-child {
     border-left: none;
   }
-  header .col {
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-    color: #31708f;
-    padding-top: 15px;
-    font-weight: bold;
+  header {
+    border-left: 1px #bce8f1 solid;
+    border-right: 1px #bce8f1 solid;
+    .col {
+      background-color: #d9edf7;
+      border-color: #bce8f1;
+      color: #31708f;
+      padding-top: 15px;
+      font-weight: bold;
+    }
   }
-  section .col {
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    height: 44px;
-    line-height: 30px;
-    &.img-container {
-      img {
-        border: 1px solid;
-        width: 32px;
-        height: 32px;
-        display: block;
-        margin: 0 auto;
-        clear: right;
-        &:hover{
-          left: 50%;
-          margin-top: -40px;
-          margin-left: -16px;
-          padding: 0 !important;
-          border-radius: 0% !important;
-          width: 100px !important;
-          height: 100px !important;
-          background-color: #fff;
-          position: absolute;
-          z-index: 2;
-          -webkit-transition-duration: .4s;
-          -webkit-box-shadow:0px 0px 30px #ccc;
+  section {
+    border-left: 1px #faebcc solid;
+    border-right: 1px #faebcc solid;
+    .col {
+      background-color: #fcf8e3;
+      border-color: #faebcc;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 44px;
+      line-height: 30px;
+      &.img-container {
+        img {
+          border: 1px solid;
+          width: 32px;
+          height: 32px;
+          display: block;
+          margin: 0 auto;
+          clear: right;
+          &:hover{
+            left: 50%;
+            margin-top: -40px;
+            margin-left: -16px;
+            padding: 0 !important;
+            border-radius: 0% !important;
+            width: 100px !important;
+            height: 100px !important;
+            background-color: #fff;
+            position: absolute;
+            z-index: 2;
+            -webkit-transition-duration: .4s;
+            -webkit-box-shadow:0px 0px 30px #ccc;
+          }
         }
       }
     }
