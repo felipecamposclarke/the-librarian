@@ -6,7 +6,6 @@ describe SeparateEditorialFromBooks do
   let(:migration) { SeparateEditorialFromBooks.new }
 
   describe '#data' do
-
     it 'works' do
       expect { migration.data }.to_not raise_exception
     end

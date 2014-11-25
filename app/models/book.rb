@@ -5,7 +5,6 @@
 #  id               :integer          not null, primary key
 #  title            :string(255)      not null
 #  author           :string(255)      not null
-#  editorial        :string(255)      not null
 #  original_title   :string(255)
 #  translation      :string(255)
 #  edition          :integer
@@ -18,6 +17,9 @@
 #
 
 class Book < ActiveRecord::Base
+
+  # Associations
+  belongs_to :editorial
 
   # Paperclip
   has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ":style-cover-missing.png"
