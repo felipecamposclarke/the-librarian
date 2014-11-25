@@ -1,1 +1,6 @@
 es:
+  layouts:
+    application:
+      menu: Menú
+      books: Ver libros
+      editorials: Ver editoriales
