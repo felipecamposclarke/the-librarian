@@ -1,0 +1,19 @@
+@import 'twitter-bootstrap-static/bootstrap';
+@import 'twitter-bootstrap-static/fontawesome';
+
+/*
+** ====================================================
+** CUSTOM CLASSES
+** ====================================================
+*/
+
+.dl-horizontal-left {
+  @extend .dl-horizontal;
+  dt {
+    width: auto;
+    margin-right: 8px;
+  }
+  dd {
+    margin-left: 0;
+  }
+}
