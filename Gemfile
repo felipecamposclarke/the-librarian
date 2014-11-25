@@ -57,6 +57,20 @@ group :development do
   gem 'annotate'
 end
 
+group :development, :test do
+  gem 'zeus'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'rspec-nc', require: false
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
