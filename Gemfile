@@ -42,6 +42,8 @@ gem 'twitter-bootstrap-rails'
 # devise: authentication
 gem 'devise'
 
+# file attachment management for ActiveRecord
+gem "paperclip"
 
 group :development do
   # mejora los mensajes de error en el browser
@@ -50,7 +52,7 @@ group :development do
   gem 'binding_of_caller'
   # assets en consola: por que no te callas!
   gem 'quiet_assets'
-  
+
   # gema para la documentacion de modelos
   gem 'annotate'
 end
