@@ -59,6 +59,7 @@ end
 
 group :development, :test do
   gem 'zeus'
+  gem 'migration_data'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
