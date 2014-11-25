@@ -45,6 +45,9 @@ gem 'devise'
 # file attachment management for ActiveRecord
 gem "paperclip"
 
+# integrate Select2 javascript library with asset pipeline
+gem "select2-rails"
+
 group :development do
   # mejora los mensajes de error en el browser
   gem 'better_errors'
