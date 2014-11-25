@@ -22,6 +22,9 @@ module TheLibrarian
     config.i18n.default_locale = :es
     config.i18n.locale = :es
 
+    # Adds the view folder to locales
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'views', '*.{rb,yml}').to_s]
+
     # The default scaffold generators
     config.generators do |g|
       g.view_specs false
