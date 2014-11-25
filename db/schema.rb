@@ -11,11 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125034510) do
+ActiveRecord::Schema.define(version: 20141125065602) do
+
+  create_table "Works", force: true do |t|
+    t.integer  "author_id",  null: false
+    t.integer  "book_id",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "Works", ["author_id"], name: "index_Works_on_author_id"
+  add_index "Works", ["book_id"], name: "index_Works_on_book_id"
+
+  create_table "authors", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "books", force: true do |t|
     t.string   "title",              null: false
-    t.string   "author",             null: false
     t.string   "original_title"
     t.string   "translation"
     t.integer  "edition"
