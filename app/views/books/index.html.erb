@@ -45,6 +45,9 @@
               <dt><%=t('activerecord.attributes.book.publication_year') %></dt>
               <dd><%=book.publication_year || '-' %></dd>
 
+              <dt><%=t('activerecord.attributes.book.authors') %></dt>
+              <dd><%= collection_to_html book.authors.pluck(:name) %></dd>
+
               <dt></dt>
               <dd>
               </dd>

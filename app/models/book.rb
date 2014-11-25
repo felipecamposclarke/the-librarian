@@ -22,14 +22,16 @@ class Book < ActiveRecord::Base
   belongs_to :editorial
   has_many :works
   has_many :authors, :through => :works
+  accepts_nested_attributes_for :authors
+  accepts_nested_attributes_for :works
 
   # Paperclip
   has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ":style-cover-missing.png"
 
   # Validations
-  validates :title, :presence => true
-  validates :edition, :publication_year, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
-  validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
+  # validates :title, :presence => true
+  # validates :edition, :publication_year, numericality: { only_integer: true, greater_than: 0 }, allow_nil: true
+  # validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
 
   # Delegates
   delegate :name, to: :editorial, prefix: true

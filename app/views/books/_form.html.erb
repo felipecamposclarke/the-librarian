@@ -20,8 +20,8 @@
     <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :author %><br>
-    <%= f.text_field :author, class: "form-control" %>
+    <%= f.label :authors %><br>
+    <%= f.select :author_ids, Author.all.collect {|a| [a.name, a.id]}, {}, { multiple: true, class: 'form-control' } %>
   </div>
   <div class="form-group">
     <%= f.label :editorial %><br>

@@ -17,4 +17,6 @@
  * =require bootstrap_and_overrides
  * =require theme_styles
  * =require_tree ./controller_styles
+ * =require select2
+ * =require select2-bootstrap
  */

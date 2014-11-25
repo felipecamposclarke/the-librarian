@@ -9,10 +9,10 @@
       <dl class="dl-horizontal-left">
         <dt><%=t('activerecord.attributes.book.title') %></dt>
         <dd><%=@book.title || '-' %></dd>
-        <dt><%=t('activerecord.attributes.book.author') %></dt>
-        <dd><%=@book.author || '-' %></dd>
+        <dt><%=t('activerecord.attributes.book.authors') %></dt>
+        <dd><%= collection_to_html @book.authors.pluck(:name) %></dd>
         <dt><%=t('activerecord.attributes.book.editorial') %></dt>
-        <dd><%=@book.editorial || '-' %></dd>
+        <dd><%=@book.editorial_name || '-' %></dd>
         <dt><%=t('activerecord.attributes.book.original_title') %></dt>
         <dd><%=@book.original_title || '-' %></dd>
         <dt><%=t('activerecord.attributes.book.translation') %></dt>
