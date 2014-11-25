@@ -25,7 +25,7 @@
   </div>
   <div class="form-group">
     <%= f.label :editorial %><br>
-    <%= f.text_field :editorial, class: "form-control" %>
+    <%= f.select :editorial, Editorial.all.map { |e| [e.name, e.id] }, {}, { class: 'form-control' } %>
   </div>
   <div class="form-group">
     <%= f.label :original_title %><br>
