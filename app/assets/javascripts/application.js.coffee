@@ -7,5 +7,8 @@
 #= require_tree .
 
 
-$(document).ready ->
+ready = ->
   $("select[multiple='multiple']").select2()
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
