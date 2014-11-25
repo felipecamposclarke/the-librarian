@@ -22,6 +22,7 @@ class Book < ActiveRecord::Base
   belongs_to :editorial
   has_many :works
   has_many :authors, :through => :works
+  accepts_nested_attributes_for :authors
 
   # Paperclip
   has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ":style-cover-missing.png"

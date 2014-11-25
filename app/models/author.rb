@@ -9,4 +9,5 @@
 class Author < ActiveRecord::Base
   has_many :works
   has_many :books, :through => :works
+  accepts_nested_attributes_for :books
 end

@@ -4,6 +4,8 @@
       <dl class="dl-horizontal-left">
         <dt><%=t('activerecord.attributes.author.name') %></dt>
         <dd><%=@author.name || '-' %></dd>
+        <dt><%=t('activerecord.attributes.author.books') %></dt>
+        <dd><%= collection_to_html @author.books.pluck(:title) %></dd>
       </dl>
 
   <div class="row">
