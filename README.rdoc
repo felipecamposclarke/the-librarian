@@ -2,6 +2,4 @@
 
 La biblio (the librarian?)
 
-Aplicación de ejemplo de Rails 4 + Bootstrap 3
-
-Hay libros... y se pueden... ver? Charan!
+selection test for "Ravel"
